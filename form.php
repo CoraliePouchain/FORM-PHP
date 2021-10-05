@@ -7,29 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/thanks.php" method="post">
+<?php
+require './thanks.php';
+?>
+    <p>* required field</p>
+    <form action="thanks.php" method="post">
         <div>
             <label for="name">Nom :</label>
-            <input type="text" id="name" name="user_name">
+            <input type="text" name="user_name" id='name'>
+            
         </div>
         <div>
             <label for="lname">Prénom :</label>
-            <input type="text" id="lname" name="last_name">
+            <input type="text" name="last_name" id='lname'>
         </div>
         <div>
             <label for="mail">e-mail :</label>
-            <input type="email" id="mail" name="user_mail">
+            <input type="email" name="user_mail" id='mail'>
         </div>
         <div>
             <label for="tel">Téléphone :</label>
-            <input type="tel" id="tel" name="phone_number">
+            <input type="tel" name="phone_number" id='tel'>
         </div>
         <div>
-        <label for="objet">Objet:</label>
-        <select name="objet" id="objet">
-            <option value="reclam">Réclamation</option>
-            <option value="retour">Retour</option>
-            <option value="refund">Remboursement</option>
+        <label for="object">Objet du message:</label>
+        <select name="object" required id="object">
+            <option value="Seigneur des Anneaux">Seigneur des Anneaux</option>
+            <option value="Hobbit">Hobbit</option>
+            <option value="Silmarilion">Silmarilion</option>
         </select>
         </div>
         <div>
